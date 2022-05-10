@@ -86,6 +86,10 @@ inputs:
     description: "Use a custom xcargs parameters"
     required: false
     default: ""
+  skip_archive:
+    description: "Skip Archiving"
+    required: false
+    default: ""    
 runs:
   using: "node12"
   main: "dist/index.js"
