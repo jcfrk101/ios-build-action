@@ -143,6 +143,8 @@ platform :ios do
     use_build_destination = !ENV['BUILD_DESTINATION'].empty?
     use_xcargs = !ENV['XCARGS'].empty?
     use_skiparchive = !ENV['SKIP_ARCHIVE'].empty?
+    use_deriveddatapath = !ENV['DERIVED_DATA_PATH'].empty?
+    
     use_cloned_source_packages_path = !ENV['CLONED_SOURCE_PACKAGES_PATH'].empty?
     build_app(
       workspace: use_workspace ? ENV['WORKSPACE_PATH'] : nil,
@@ -164,7 +166,8 @@ platform :ios do
       sdk: use_build_sdk ? ENV['BUILD_SDK'] : nil,
       destination: use_build_destination ? ENV['BUILD_DESTINATION'] : nil,
       xcargs: use_xcargs ? ENV['XCARGS'] : nil,
-      skip_archive: use_skiparchive ? ENV['SKIP_ARCHIVE'] : nil
+      skip_archive: use_skiparchive ? ENV['SKIP_ARCHIVE'] : nil,
+      derived_data_path: use_deriveddatapath ? ENV['DERIVED_DATA_PATH'] : nil
     )
 
     delete_keychain(name: 'ios-build.keychain')

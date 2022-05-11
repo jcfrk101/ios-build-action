@@ -89,7 +89,12 @@ inputs:
   skip_archive:
     description: "Skip Archiving"
     required: false
+    default: ""
+  derived_data_path:
+    description: "Path where build products will be stored"
+    required: false
     default: ""    
+
 runs:
   using: "node12"
   main: "dist/index.js"

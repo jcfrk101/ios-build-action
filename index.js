@@ -51,6 +51,9 @@ async function run() {
     process.env.BUILD_DESTINATION = core.getInput("build-destination");
     process.env.XCARGS = core.getInput("xcargs");
     process.env.SKIP_ARCHIVE = core.getInput("skip-archive");
+    process.env.DERIVED_DATA_PATH = core.getInput("derived-data-path");
+	
+	
 
 
     // Execute build.sh
