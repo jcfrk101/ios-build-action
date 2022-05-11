@@ -86,11 +86,11 @@ inputs:
     description: "Use a custom xcargs parameters"
     required: false
     default: ""
-  skip_archive:
+  skip-archive:
     description: "Skip Archiving"
     required: false
     default: ""
-  derived_data_path:
+  derived-data-path:
     description: "Path where build products will be stored"
     required: false
     default: ""    
